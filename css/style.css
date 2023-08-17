@@ -1,0 +1,94 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #FFE81F;
+  margin: 0;
+  height: auto;
+  background: linear-gradient(to bottom, #232526, #414345);
+}
+
+header, section textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to top, rgba(62, 81, 81, 0.4980392157), rgba(222, 203, 164, 0.5058823529));
+  border-radius: 15px;
+  margin: 1%;
+  box-shadow: 0 0 10px #FFE81F;
+}
+header h1, section textarea h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+header .info-section, section textarea .info-section {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20%;
+  margin-bottom: 2%;
+}
+header .info, section textarea .info {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+section .typing-area {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+section .typing-text {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: perspective(300px) rotateX(20deg);
+  transform-origin: 50% 100%;
+  text-align: center;
+  transform: perspective(300px) rotateX(20deg) translateY(90%);
+}
+section .start-crawl {
+  animation: crawl 60s linear;
+}
+@keyframes crawl {
+  from {
+    transform: perspective(300px) rotateX(20deg) translateY(90%);
+  }
+  to {
+    transform: perspective(300px) rotateX(20deg) translateY(-1%);
+  }
+}
+section .current-word {
+  margin-bottom: 1%;
+  background-color: linear-gradient(to top, rgba(62, 81, 81, 0.4980392157), rgba(222, 203, 164, 0.5058823529));
+  align-self: center;
+  justify-self: center;
+  margin: 2%;
+  font-size: 1.5rem;
+  border: #FFE81F;
+}
+section textarea {
+  width: 70%;
+  border: none;
+  color: #FFE81F;
+  font-size: 1rem;
+  padding: 5%;
+  margin: 2%;
+  outline: none;
+  height: 100px;
+}
+
+th tr {
+  min-width: 100px;
+}/*# sourceMappingURL=style.css.map */

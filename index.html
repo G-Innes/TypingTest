@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Typing Speed Test</h1>
+        </div>
+        <!-- Stats for WPM, mistakes, accuracy, and timer -->
+        <div class="info-section">
+            <div class="wpm info">
+                <div class="wpm-text">WPM</div>
+                <div class="wpm-score">-</div>
+            </div>
+            <div class="mistakes info">
+                <div class="mistakes-text">Mistakes</div>
+                <div class="mistakes-score">-</div>
+            </div>
+            <div class="accuracy info">
+                <div class="accuracy-text">Accuracy</div>
+                <div class="accuracy-score">-%</div>
+            <div class="timer info">
+                <div class="timer-text">Timer</div>
+                <div class="timer-score">60s</div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <!-- Text the user needs to type -->
+        <div class="typing-area">
+            <div class="typing-text"></div>
+        </div>
+        <!-- Display the current word -->
+        <div class="current-word"></div>
+        <!-- Textarea for the user to type in -->
+        <textarea placeholder="Start typing here..." cols="30" rows="10"></textarea>
+        <!-- Table for previous typing metrics -->
+        <table id="metricsTable">
+            <thead>
+                <tr>
+                    <th>Attempt No. </th>
+                    <th>WPM: </th>
+                    <th>Accuracy (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add rows dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

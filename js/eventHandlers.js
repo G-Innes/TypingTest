@@ -28,6 +28,7 @@ function handleDocumentKeydown(e) {
 
 // Checks for mistakes & updates the current word
 function handleTextareaInput(e) {
+    if (e.key === 'Enter') return;
     state.currentIndex = e.target.value.length;
     handleMistake(e.target.value, state.text.charAt(state.currentIndex - 1));
 
@@ -38,7 +39,7 @@ function setupEventListeners() {
     textarea.addEventListener('focus', handleTextareaFocus);
     textarea.addEventListener('keyup', handleTextareaKeyup);
     document.addEventListener('keydown', handleDocumentKeydown);
-    textarea.addEventListener('input', handleTextareaInput);
+    textarea.addEventListener('keyup', handleTextareaInput);
 }
 
 setupEventListeners();

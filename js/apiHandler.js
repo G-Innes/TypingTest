@@ -6,7 +6,7 @@ export async function fetchTypingText() {
         const response = await fetch(API);
         const text = await response.json();
 
-        return text.join(' ');
+        return text.join('').replace( /\.  /g,'. ');
 
     } catch (error) {
 

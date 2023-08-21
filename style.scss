@@ -1,0 +1,100 @@
+$gradient: linear-gradient(to bottom, #232526, #414345);
+$secondary: linear-gradient(to top, #3e51517f, #decba481);
+$text-color: #FFE81F;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color;
+    margin: 0;
+    background: $gradient;
+    height: 100%;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: $secondary;
+    border-radius: 15px;
+    margin: 1%;
+    box-shadow: 0 0 10px $text-color;
+
+    h1{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .info-section{
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20%;
+        margin-bottom: 2%;
+    }
+    .info{
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+    }
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    padding: 2%;
+    margin-bottom: 2%;
+
+    .typing-area{
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .typing-text {
+        font-size: 1.5em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: perspective(300px) rotateX(20deg);
+        transform-origin: 50% 100%;
+        text-align: center;
+        transform: perspective(300px) rotateX(20deg) translateY(80%);
+    }
+    .start-crawl{
+        animation: crawl 70s linear;
+    }
+    @keyframes crawl {
+        from {
+            transform: perspective(300px) rotateX(20deg) translateY(80%);
+        }
+        to {
+            transform: perspective(300px) rotateX(20deg) translateY(-1%);
+        }
+    }
+    .current-word{
+        margin-bottom: 1%;
+        background-color: $secondary;
+        align-self: center;
+        justify-self: center;
+        margin: 2%;
+        font-size: 1.5rem;
+        border: #FFE81F
+
+    }
+    textarea{
+        @extend header;
+        width: 70%;
+        border: none;
+        color: $text-color;
+        font-size: 1rem;
+        padding: 5%;
+        margin: 2%;
+        outline: none;
+        height: 100px;
+    }
+
+}
+th tr{
+    min-width: 100px;
+}
